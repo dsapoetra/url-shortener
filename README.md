@@ -1,3 +1,6 @@
+![Coverage](https://img.shields.io/codecov/c/github/dsapoetra/url-shortener-be)
+
+
 # URL Shortener Backend
 
 This is a backend project for a URL shortener service, built using **Golang** with modular architecture.
