@@ -62,6 +62,12 @@ url-shortener-be
    go run cmd/main.go
    ```
 
+6. Available commands:
+   ```bash
+   make help
+   ```
+
+
 ## Usage
 - API Endpoints:
   - **POST /api/urls/**: Shorten a URL.
