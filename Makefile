@@ -36,6 +36,14 @@ create-users-migration:
 install-migrate:
 	go install -tags 'postgres' github.com/golang-migrate/migrate/v4/cmd/migrate@latest
 
+# Run tests
+test:
+	go test -v ./...
+
+# Format code
+fmt:
+	go fmt ./...
+
 # Help
 help:
 	@echo "Available commands:"
@@ -44,3 +52,6 @@ help:
 	@echo "  make migrate-down      - Rollback all migrations"
 	@echo "  make migrate-force     - Force set migration version"
 	@echo "  make install-migrate   - Install golang-migrate tool"
+	@echo "  make test              - Run tests"
+	@echo "  make fmt               - Format code"
+	@echo "  make help              - Show this help message"
