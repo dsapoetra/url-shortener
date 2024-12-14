@@ -1,4 +1,4 @@
-name: Go CI
+name: Go CI with Coveralls
 
 on:
   push:
@@ -13,28 +13,31 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # Step 1: Check out the code
       - name: Check out code
         uses: actions/checkout@v3
 
+      # Step 2: Set up Go environment
       - name: Set up Go
         uses: actions/setup-go@v4
         with:
           go-version: 1.21
 
+      # Step 3: Install dependencies
       - name: Install dependencies
         run: go mod tidy
 
-      - name: Build
-        run: go build -v ./...
-
-       # Run tests and generate coverage report
+      # Step 4: Run tests and generate coverage
       - name: Run tests
         run: go test -coverprofile=coverage.out ./...
 
-      # Send coverage to Coveralls
+      # Step 5: Install goveralls
+      - name: Install goveralls
+        run: go install github.com/mattn/goveralls@latest
+
+      # Step 6: Send coverage to Coveralls
       - name: Send coverage to Coveralls
         run: |
           goveralls -coverprofile=coverage.out -service=github -repotoken ${{ secrets.COVERALLS_REPO_TOKEN }}
         env:
           COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
-            
