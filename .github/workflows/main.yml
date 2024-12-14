@@ -30,6 +30,10 @@ jobs:
       - name: Run tests
         run: go test -v ./...
       
-      - name: Coveralls GitHub Action
-        uses: coverallsapp/github-action@v2.3.4
+      # Send coverage to Coveralls
+      - name: Send coverage to Coveralls
+        run: |
+          goveralls -coverprofile=coverage.out -service=github -repotoken ${{ secrets.COVERALLS_REPO_TOKEN }}
+        env:
+          COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }
             
