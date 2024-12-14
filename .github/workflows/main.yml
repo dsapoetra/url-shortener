@@ -27,13 +27,14 @@ jobs:
       - name: Build
         run: go build -v ./...
 
+       # Run tests and generate coverage report
       - name: Run tests
-        run: go test -v ./...
-      
+        run: go test -coverprofile=coverage.out ./...
+
       # Send coverage to Coveralls
       - name: Send coverage to Coveralls
         run: |
           goveralls -coverprofile=coverage.out -service=github -repotoken ${{ secrets.COVERALLS_REPO_TOKEN }}
         env:
-          COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }
+          COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
             
