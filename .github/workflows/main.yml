@@ -29,3 +29,7 @@ jobs:
 
       - name: Run tests
         run: go test -v ./...
+      
+      - name: Coveralls GitHub Action
+        uses: coverallsapp/github-action@v2.3.4
+            
