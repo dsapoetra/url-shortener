@@ -1,0 +1,36 @@
+# .scrutinizer.yml
+build:
+    environment:
+        variables:
+            # Set the GOPATH for Go installation
+            GOPATH: "$HOME/go"
+            # Add the Go binary directory to PATH
+            PATH: "$HOME/go/bin:$PATH"
+
+    before_scripts:
+        # Update and install Go
+        - sudo apt-get update
+        - sudo apt-get install -y golang-go
+
+        # Set up Go environment
+        - mkdir -p $HOME/go/bin
+        - export GOPATH=$HOME/go
+        - export PATH=$GOPATH/bin:$PATH
+
+        # Install golang-migrate CLI tool
+        - go install -tags 'postgres' github.com/golang-migrate/migrate/v4/cmd/migrate@latest
+
+        # Verify golang-migrate installation
+        - migrate -version
+
+    tests:
+        override:
+            # Run Makefile command for migration creation
+            - make migrate-create
+
+    after_scripts:
+        # Clean up (optional, if needed)
+        - echo "Build and tests completed."
+
+tools:
+    php_cs_fixer: true
