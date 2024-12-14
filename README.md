@@ -1,10 +1,7 @@
 [![Build Status](https://github.com/dsapoetra/url-shortener-be/workflows/test/badge.svg)](https://github.com/dsapoetra/url-shortener-be/actions)
 [![Quality Score](https://img.shields.io/scrutinizer/g/dsapoetra/url-shortener-be.svg?style=flat)](https://scrutinizer-ci.com/g/dsapoetra/url-shortener-be)
 [![Coverage Status](https://coveralls.io/repos/github/dsapoetra/url-shortener-be/badge.svg)](https://coveralls.io/github/dsapoetra/url-shortener-be)
-[![Latest Stable Version](https://poser.pugx.org/dsapoetra/url-shortener-be/v/stable.svg)](https://packagist.org/packages/dsapoetra/url-shortener-be)
-[![Total Downloads](https://poser.pugx.org/dsapoetra/url-shortener-be/d/total.svg)](https://packagist.org/packages/dsapoetra/url-shortener-be)
-[![Software License](https://poser.pugx.org/dsapoetra/url-shortener-be/license.svg)](https://packagist.org/packages/dsapoetra/url-shortener-be)
-
+![example workflow](https://github.com/dsapoetra/url-shortener-be/actions/workflows/main.yml/badge.svg)
 
 # URL Shortener Backend
 
