@@ -18,11 +18,41 @@
 # vendor/
 
 # Go workspace file
-go.work
-go.work.sum
+Backend/go.work
+Backend/go.work.sum
 
 # env file
-.env
+Backend/.env
 
 # ignore all files in the .env directory
-.env/*
+Backend/.env/*
+
+Frontend/.env/*
+# Logs
+Frontend/logs
+Frontend/*.log
+Frontend/npm-debug.log*
+Frontend/yarn-debug.log*
+Frontend/yarn-error.log*
+Frontend/pnpm-debug.log*
+Frontend/lerna-debug.log*
+
+Frontend/node_modules
+Frontend/dist
+Frontend/dist-ssr
+Frontend/*.local
+
+# Editor directories and files
+Frontend/.vscode/*
+Frontend/.idea
+Frontend/.DS_Store
+Frontend/*.suo
+Frontend/*.ntvs*
+Frontend/*.njsproj
+Frontend/*.sln
+*.sw?
+
+Frontend/.env
+Frontend/.env.local
+Frontend/.env.*.local
+.DS_Store
