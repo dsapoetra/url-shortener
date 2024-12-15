@@ -25,19 +25,26 @@ jobs:
 
       # Step 3: Install dependencies
       - name: Install dependencies
-        run: go mod tidy
+        run: |
+          cd Backend
+          go mod tidy
 
       # Step 4: Run tests and generate coverage
       - name: Run tests
-        run: go test -coverprofile=coverage.out ./...
+        run: |
+          cd Backend
+          go test -coverprofile=coverage.out ./...
 
       # Step 5: Install goveralls
       - name: Install goveralls
-        run: go install github.com/mattn/goveralls@latest
+        run: |
+          cd Backend
+          go install github.com/mattn/goveralls@latest
 
       # Step 6: Send coverage to Coveralls
       - name: Send coverage to Coveralls
         run: |
+          cd Backend
           goveralls -coverprofile=coverage.out -service=github -repotoken ${{ secrets.COVERALLS_REPO_TOKEN }}
         env:
           COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
