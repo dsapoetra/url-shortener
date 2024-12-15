@@ -53,6 +53,9 @@ func (s *UrlService) CreateUrl(url *models.Url) (*models.ShortUrl, error) {
 }
 
 func generateShortUrl(url string) string {
+	if url == "" {
+		return ""
+	}
 	// Define the character set for base62 encoding
 	const charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
 	const length = 6
