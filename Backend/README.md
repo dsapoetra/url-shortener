@@ -1,6 +1,6 @@
 [![Quality Score](https://img.shields.io/scrutinizer/g/dsapoetra/url-shortener-be.svg?style=flat)](https://scrutinizer-ci.com/g/dsapoetra/url-shortener-be)
 [![Coverage Status](https://coveralls.io/repos/github/dsapoetra/url-shortener-be/badge.svg?branch=main)](https://coveralls.io/github/dsapoetra/url-shortener-be?branch=main)
-[![GitHub Actions Status](https://github.com/dsapoetra/url-shortener-be/actions/workflows/main.yml/badge.svg?random=123)](https://github.com/dsapoetra/url-shortener-be/actions)
+[![GitHub Actions Status](https://github.com/dsapoetra/url-shortener/actions/workflows/backend.yml/badge.svg)](https://github.com/dsapoetra/url-shortener/actions/workflows/backend.yml)
 
 # URL Shortener Backend
 
