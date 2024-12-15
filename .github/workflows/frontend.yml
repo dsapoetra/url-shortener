@@ -3,35 +3,32 @@ name: Frontend CI
 on:
   push:
     paths:
-      - 'frontend/**'
+      - "Frontend/**"
   pull_request:
     paths:
-      - 'frontend/**'
+      - "Frontend/**"
 
 jobs:
   build-and-test:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: Frontend
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/checkout@v3
 
-    - name: Set up Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: '18' # Specify your Node.js version
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "18" # Specify your Node.js version
 
-    - name: Install dependencies
-      run: |
-        cd frontend
-        npm install
+      - name: Install dependencies
+        run: npm install
 
-    - name: Run tests
-      run: |
-        cd frontend
-        npm test
+      - name: Run tests
+        run: npm test
 
-    - name: Build application
-      run: |
-        cd frontend
-        npm run build
+      - name: Build application
+        run: npm run build
