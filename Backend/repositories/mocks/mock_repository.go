@@ -11,7 +11,7 @@ package mock_repositories
 
 import (
 	reflect "reflect"
-	models "url-shortener/models"
+	models "Backend/models"
 
 	gomock "go.uber.org/mock/gomock"
 )

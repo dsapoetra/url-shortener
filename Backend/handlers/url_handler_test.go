@@ -1,12 +1,12 @@
 package handlers
 
 import (
+	"Backend/models"
+	mock_services "Backend/services/mocks"
 	"encoding/json"
 	"net/http/httptest"
 	"strings"
 	"testing"
-	"url-shortener/models"
-	mock_services "url-shortener/services/mocks"
 
 	"github.com/gofiber/fiber/v2"
 	"github.com/stretchr/testify/assert"

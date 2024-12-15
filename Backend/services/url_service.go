@@ -1,13 +1,13 @@
 package services
 
 import (
+	"Backend/models"
+	"Backend/repositories"
 	"crypto/sha256"
 	"encoding/binary"
 	"fmt"
 	"strings"
 	"time"
-	"url-shortener/models"
-	"url-shortener/repositories"
 
 	"golang.org/x/exp/rand"
 )

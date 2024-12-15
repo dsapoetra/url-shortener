@@ -1,7 +1,7 @@
 package routes
 
 import (
-	"url-shortener/handlers"
+	"Backend/handlers"
 
 	"github.com/gofiber/fiber/v2"
 )

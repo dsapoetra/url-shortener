@@ -1,9 +1,9 @@
 package handlers
 
 import (
+	"Backend/models"
+	"Backend/services"
 	"log"
-	"url-shortener/models"
-	"url-shortener/services"
 
 	"github.com/gofiber/fiber/v2"
 	"github.com/spf13/viper"

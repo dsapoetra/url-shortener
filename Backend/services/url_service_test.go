@@ -5,7 +5,7 @@ import (
 	"testing"
 	"time"
 
-	mock_repositories "url-shortener/repositories/mocks"
+	mock_repositories "Backend/repositories/mocks"
 
 	"github.com/stretchr/testify/assert"
 	"go.uber.org/mock/gomock"

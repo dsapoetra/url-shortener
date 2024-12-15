@@ -1,7 +1,7 @@
 package repositories
 
 import (
-	"url-shortener/models"
+	"Backend/models"
 
 	"github.com/jmoiron/sqlx"
 )

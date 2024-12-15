@@ -3,12 +3,12 @@ package main
 import (
 	"log"
 
-	"url-shortener/config"
-	"url-shortener/db"
-	"url-shortener/handlers"
-	"url-shortener/repositories"
-	"url-shortener/routes"
-	"url-shortener/services"
+	"Backend/config"
+	"Backend/db"
+	"Backend/handlers"
+	"Backend/repositories"
+	"Backend/routes"
+	"Backend/services"
 
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/swagger"
